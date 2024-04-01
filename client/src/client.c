@@ -23,9 +23,8 @@ int main(void)
 
 	/* ---------------- ARCHIVOS DE CONFIGURACION ---------------- */
 
-	if((config = iniciar_config())==NULL){
-		exit(1);
-	}
+	config = iniciar_config();
+
 
 	// Usando el config creado previamente, leemos los valores del config y los
 	// dejamos en las variables 'ip', 'puerto' y 'valor'
@@ -60,10 +59,7 @@ int main(void)
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger = log_create("TP0.log", "TP0", 1, LOG_LEVEL_INFO);
-	if(nuevo_logger==NULL){
-		printf("No se pudo crear el Logger\n");
-		exit(1);
-	}
+
 	return nuevo_logger;
 }
 
