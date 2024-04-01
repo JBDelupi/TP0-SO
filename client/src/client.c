@@ -23,7 +23,7 @@ int main(void)
 
 	/* ---------------- ARCHIVOS DE CONFIGURACION ---------------- */
 
-	if(config = iniciar_config()==NULL){
+	if((config = iniciar_config())==NULL){
 		exit(1);
 	}
 
